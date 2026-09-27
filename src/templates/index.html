@@ -1,0 +1,51 @@
+{% extends 'base.html'%}
+{% block head %}
+    
+{% endblock %}
+
+{% block body %}
+  <h1> Task Master</h1>
+
+  <form actions="/" method="POST" class="add-task-form">
+    <input type="text" name="content" id="content" class="add-task-input" required maxlength="200" minlength="3">
+    <input type="submit" value ="Add" class="add-task-button">
+  </form>
+  
+  {%if tasks| length < 1 %}
+    <h4 style="text-align: center"> no task added yet </h4>
+  {% else %}
+    <div class="task-list">
+      {%for task in tasks %}
+        <div class="task">
+          <div class="task-base">
+            <p class="task-base-signature">Task №{{task.id}} | at {{ task.date_created.date() }}</p>
+            <div class="task-base-links">
+              <a href="/delete/{{task.id}}">Delete</a>
+              <a href="/update/{{task.id}}">Update</a>
+            </div>
+          </div>
+
+          <div class="task-description">
+            {{ task.content }}
+          </div>
+          
+        </div>
+      {%endfor %}
+
+    </div>
+  {%endif%}
+
+  <form action="/" method="GET" id="pagination-form" class="pagination-form">
+    <input type="number" value="{{ page }}" name="page" hidden>
+    <button type="submit" id="last-page-button">&lt</button>
+    <p>{{ page }}</p>
+    <button type="submit" id="next-page-button">&gt</button>
+  </form>
+
+  <a class="logout-link" href="/logout">Logout</a>
+
+  <script type="module" src="{{ url_for('static', filename='JS/index_pagination_scripts.js') }}"></script>
+
+  
+
+{% endblock %}

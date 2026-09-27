@@ -1,0 +1,246 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(245, 245, 245);
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.logout-link {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    
+  
+    padding: 10px;
+  
+
+    box-shadow: 2px 2px 8px rgb(220, 220, 220);
+    transition: all 0.2s ease-in-out;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+
+    
+}
+
+
+h1 {
+    width: max(500px, 30vw);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    text-shadow: 2px 2px 4px rgb(180, 180, 180);
+    text-align: start;
+}
+
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.add-task-form {
+    width: max(500px, 30vw);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 10px;
+}
+
+
+.add-task-input {
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    height: 40px;
+    padding: 5px;
+    flex-grow: 6;
+    box-shadow: 2px 2px 6px rgb(230, 230, 230);
+    transition: all 0.2s ease-in-out;
+    font-size: 18px;
+}
+
+
+.add-task-button {
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    height: 40px;
+    padding: 5px;
+    flex-grow: 1;
+    box-shadow: 2px 2px 8px rgb(220, 220, 220);
+    transition: all 0.2s ease-in-out;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+
+.add-task-input:focus, .add-task-button:focus, 
+.add-task-input:hover,  .add-task-button:hover, 
+.task-base-links > a:hover, .pagination-form > button:hover, 
+.register-login-form > input:hover, .register-login-form > button:hover, 
+.register-login-form > button:focus, .register-login-form > input:focus,
+.logout-link:hover {
+    outline: none;
+    box-shadow: 2px 2px 6px rgb(190, 190, 190);
+}
+
+
+.task-list {
+    width: max(500px, 30vw);
+    background-color: rgb(250, 250, 250);
+    border-radius: 16px;
+    box-shadow: 2px 2px 8px rgb(220, 220, 220);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    gap: 10px;
+    margin: 10px;
+}
+
+.task {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgb(230, 230, 230);
+    padding: 10px;
+}
+
+.task-base {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-base-signature {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-decoration: underline solid 1px;
+}
+
+.task-base-links {
+    display: flex;
+    gap: 6px;
+}
+
+.task-base-links > a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    box-shadow: 2px 2px 8px rgb(220, 220, 220);
+    border-radius: 10px;
+    padding: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    display: block;
+    box-shadow: 2px 2px 8px rgb(220, 220, 220);
+}
+
+.task-description {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+}
+
+
+
+.pagination-form {
+    width: max(500px, 30vw);
+    margin: 10px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+
+.pagination-form > p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+.pagination-form > button {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    box-shadow: 2px 2px 8px rgb(220, 220, 220);
+    border-radius: 10px;
+    padding: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    display: block;
+    border: none;
+    box-shadow: 2px 2px 8px rgb(220, 220, 220);
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.register-login-form {
+    width: max(500px, 30vw);
+    background-color: rgb(250, 250, 250);
+    border-radius: 16px;
+    box-shadow: 2px 2px 8px rgb(220, 220, 220);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+    gap: 10px;
+    margin: 10px;
+}
+
+
+.register-login-form > input {
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    height: 40px;
+    padding: 5px;
+    flex-grow: 6;
+    box-shadow: 2px 2px 6px rgb(230, 230, 230);
+    transition: all 0.2s ease-in-out;
+    font-size: 18px;
+}
+
+.register-login-form > button {
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    height: 40px;
+    padding: 5px;
+    flex-grow: 1;
+    box-shadow: 2px 2px 8px rgb(220, 220, 220);
+    transition: all 0.2s ease-in-out;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.reg-log-form-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+}
+
+.reg-log-form-link:hover {
+    text-decoration: dashed 1px underline;
+}
+

@@ -1,0 +1,19 @@
+{% extends 'base.html'%}
+{% block head %}
+    
+{% endblock %}
+
+{% block body %}
+  <h1>Login</h1>
+  
+
+  <form actions="/login" method="POST" class="register-login-form" id="login-form">
+    <input type="text" required maxlength="100"minlength="6" placeholder="Username" name="username">
+    <input type="password" required maxlength="72" minlength="6" placeholder="Password" name="password">
+    <button type="submit">Log in</button>
+  </form>
+  <a class="reg-log-form-link" href="/register">To register</a>
+
+  <script type="module" src="{{ url_for('static', filename='JS/login_script.js') }}"></script>
+
+{% endblock %}
